@@ -1,0 +1,37 @@
+
+<style>
+    table {  font-family: arial, sans-serif;  border-collapse: collapse;  width: 100%;  margin-top: 30px;}
+    td, th {  border: 1px solid #dddddd;  text-align: left;  padding: 8px;  }
+    tr:nth-child(even) { background-color: #dddddd; }
+    .post-id{width:2%} .post-name{width:30%}
+    
+    </style>
+    <a href="<?php echo $block->getUrl();?>crud/index/booking">Insert</a>
+    <h1>View Booking page</h1>
+    <table>
+      <tr>
+        <th class="post-id">Booking Id</th>
+        <th class="post-name">First Name</th>
+        <th class="post-name">Last Name</th>
+        <th class="post-name">Phone Number</th>
+        <th colspan="2" class="post-name">Options</th>
+      </tr>
+        <?php
+            foreach ($block->getBookingCollection() as $key=>$booking):
+         ?>
+                <tr>
+                        <td><?php echo $booking->getBookingId(); ?></td>
+                        <td><?php echo $booking->getFirstname(); ?></td>
+                        <td><?php echo $booking->getLastname(); ?></td>
+                        <td><?php echo $booking->getPhone(); ?></td>
+                    
+                        <td><a href="<?php echo $block->getUrl();?>crud/index/edit/id/<?php echo $booking->getBookingId();?>">Edit</a></td>
+                        <td><a href="<?php echo $block->getUrl();?>crud/index/delete/id/<?php echo $booking->getBookingId();?>">Delete</a></td>  
+                </tr>    
+                        <?php               
+        endforeach;
+        ?>
+    </table>
+    
+    </body>
+    </html>

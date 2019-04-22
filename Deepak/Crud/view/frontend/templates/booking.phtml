@@ -1,0 +1,14 @@
+
+<a href="<?php echo $block->getUrl();?>crud/index/view">View</a>
+<h1>Add Booking page</h1>
+<form action="<?php echo $block->getFormAction() ?>" method="post">
+    <input name="firstname" type="text">
+    <br><br>
+    <input name="lastname" type="text">
+    <br><br>
+    <input name="phone" type="text">
+    <br><br>
+    <input name="bookingTime" type="date">
+    <br><br>
+    <input type="submit" value="Send booking informations">
+</form>

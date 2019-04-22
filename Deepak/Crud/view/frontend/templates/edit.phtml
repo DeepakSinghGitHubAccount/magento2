@@ -1,0 +1,19 @@
+<?php
+
+    $record = $block->getEditRecord();
+
+?>
+
+<a href="<?php echo $block->getUrl();?>crud/index/view">View</a>
+<h1>Edit Booking Page</h1>
+<form action="" method="post">
+    <input name="firstname" value="<?php echo $record['firstname'] ?>" type="text">
+    <br><br>
+    <input name="lastname" value="<?php echo $record['lastname'] ?>" type="text">
+    <br><br>
+    <input name="phone" value="<?php echo $record['phone'] ?>" type="text">
+    <br><br>
+    <input name="bookingTime"  type="date">
+    <br><br>
+    <input type="submit" value="Update">
+</form>
