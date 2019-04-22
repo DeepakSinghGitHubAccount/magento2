@@ -38,10 +38,10 @@ class Edit extends \Magento\Framework\App\Action\Action
 			
 
 			if($booking->save()){
-			$this->messageManager->addSuccessMessage('Booking done !');
+			$this->messageManager->addSuccessMessage('Booking Updated !');
 		
 			}else{
-				$this->messageManager->addErrorMessage('Booking Error !');
+				$this->messageManager->addErrorMessage('Booking Update Error !');
 				//$this->messageManager->addErrorMessage(__('Data was not saved.'));
 		
 			}

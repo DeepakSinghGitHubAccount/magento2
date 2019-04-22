@@ -39,6 +39,14 @@ class Delete extends \Magento\Framework\App\Action\Action
         $booking = $this->_BookingFactory->create();
         $result = $booking->setId($id);   
         $result = $result->delete();
+
+        if($result)
+        {
+            $this->messageManager->addSuccessMessage('Booking Deleted !');
+        }else{
+            $this->messageManager->addErrorMessage('Booking Delete Error !');
+        }
+
         return $this->_redirect('crud/index/view');
 
 

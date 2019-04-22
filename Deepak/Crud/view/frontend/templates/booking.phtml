@@ -1,5 +1,5 @@
 
-<a href="<?php echo $block->getUrl();?>crud/index/view">View</a>
+<a href="<?php echo $block->getUrl();?>crud/index/view" class="btn btn-info">View</a>
 <h1>Add Booking page</h1>
 <form action="<?php echo $block->getFormAction() ?>" method="post">
     <input name="firstname" type="text">
@@ -10,5 +10,5 @@
     <br><br>
     <input name="bookingTime" type="date">
     <br><br>
-    <input type="submit" value="Send booking informations">
+    <input type="submit" class="btn btn-primary" value="Send booking informations">
 </form>

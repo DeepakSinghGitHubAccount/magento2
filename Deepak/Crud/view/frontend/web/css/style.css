@@ -1,0 +1,25 @@
+.btn
+{
+    padding:10px;
+    color: white;
+    line-height:20px; 
+
+
+}
+.btn-danger
+{
+    background-color: tomato;
+}
+
+.btn-info
+{
+    background-color:skyblue; 
+}
+
+.btn-primary
+{
+    background-color:mediumslateblue; 
+}
+
+
+

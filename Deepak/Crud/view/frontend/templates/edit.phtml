@@ -4,7 +4,7 @@
 
 ?>
 
-<a href="<?php echo $block->getUrl();?>crud/index/view">View</a>
+<a href="<?php echo $block->getUrl();?>crud/index/view" class="btn btn-info">View</a>
 <h1>Edit Booking Page</h1>
 <form action="" method="post">
     <input name="firstname" value="<?php echo $record['firstname'] ?>" type="text">
@@ -13,7 +13,7 @@
     <br><br>
     <input name="phone" value="<?php echo $record['phone'] ?>" type="text">
     <br><br>
-    <input name="bookingTime"  type="date">
+    <input name="bookingTime"  type="date" value="<?php echo date('Y-m-d',strtotime($record['bookingTime']));?>">
     <br><br>
-    <input type="submit" value="Update">
+    <input type="submit" class="btn btn-primary" value="Update">
 </form>

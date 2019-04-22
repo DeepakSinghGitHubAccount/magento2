@@ -6,7 +6,7 @@
     .post-id{width:2%} .post-name{width:30%}
     
     </style>
-    <a href="<?php echo $block->getUrl();?>crud/index/booking">Insert</a>
+    <a href="<?php echo $block->getUrl();?>crud/index/booking" class="btn btn-info">Insert</a>
     <h1>View Booking page</h1>
     <table>
       <tr>
@@ -25,8 +25,8 @@
                         <td><?php echo $booking->getLastname(); ?></td>
                         <td><?php echo $booking->getPhone(); ?></td>
                     
-                        <td><a href="<?php echo $block->getUrl();?>crud/index/edit/id/<?php echo $booking->getBookingId();?>">Edit</a></td>
-                        <td><a href="<?php echo $block->getUrl();?>crud/index/delete/id/<?php echo $booking->getBookingId();?>">Delete</a></td>  
+                        <td><a href="<?php echo $block->getUrl();?>crud/index/edit/id/<?php echo $booking->getBookingId();?>" class="btn btn-info">Edit</a></td>
+                        <td><a href="<?php echo $block->getUrl();?>crud/index/delete/id/<?php echo $booking->getBookingId();?>" class="btn btn-danger">Delete</a></td>  
                 </tr>    
                         <?php               
         endforeach;

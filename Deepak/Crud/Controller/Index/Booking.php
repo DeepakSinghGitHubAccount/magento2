@@ -47,10 +47,10 @@ class Booking extends \Magento\Framework\App\Action\Action
 		  $booking->setData($insertData);
 
 		  if($booking->save()){
-			$this->messageManager->addSuccessMessage('Booking done !');
+			$this->messageManager->addSuccessMessage('Booking Added !');
 		
 			}else{
-				$this->messageManager->addErrorMessage('Booking Error !');
+				$this->messageManager->addErrorMessage('Booking Add Error !');
 				//$this->messageManager->addErrorMessage(__('Data was not saved.'));
 		
 			}
@@ -59,7 +59,7 @@ class Booking extends \Magento\Framework\App\Action\Action
 
             $resultRedirect = $this->resultFactory->create(\Magento\Framework\Controller\ResultFactory::TYPE_REDIRECT);
             //$resultRedirect->setUrl('/deepakSingh/magento_demo/crud/index/booking/');
-			$resultRedirect->setPath('crud/index/booking');
+			$resultRedirect->setPath('crud/index/view');
             return $resultRedirect;
 		}
 		
